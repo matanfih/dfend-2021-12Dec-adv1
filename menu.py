@@ -7,5 +7,3 @@ def menu(*args):
             return s
 
         print('Bad choice; try again')
-        
-    
