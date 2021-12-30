@@ -1,3 +1,5 @@
+import b
+
 x = 'hello from a'
 
 def hello(name):
