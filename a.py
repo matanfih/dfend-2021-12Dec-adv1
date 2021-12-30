@@ -6,4 +6,4 @@ print('[a] Done importing b')
 x = 'hello from a'
 
 def hello(name):
-    return 'Hello from a, {name}!'
+    return f'Hello from a, {name}!'
