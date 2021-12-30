@@ -1,3 +1,5 @@
+import random
+
 x = 100
 
 y = [10, 20, 30]
