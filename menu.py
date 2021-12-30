@@ -5,4 +5,6 @@ def menu(*args):
         if s in args:
             return s
 
+        print('Bad choice; try again')
+        
     
