@@ -1,6 +1,8 @@
-import b
 
 print('[a] Starting a, {__name__=}')
+print('[a] About to import b')
+import b
+print('[a] About to import b')
 
 x = 'hello from a'
 
