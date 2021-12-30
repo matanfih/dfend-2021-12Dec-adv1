@@ -6,3 +6,5 @@ print('[main] Done importing a')
 print('[main] About to import b')
 import b
 print('[main] Done importing b')
+
+print(globals())
