@@ -1,4 +1,8 @@
-print(f'[b] Starting b, {__name__=}')
-print('[b] About to import a')
+print(f'[main] Starting main, {__name__=}')
+print('[main] About to import a')
 import a
-print('[b] Done importing a')
+print('[main] Done importing a')
+
+print('[main] About to import a')
+import a
+print('[main] Done importing a')
