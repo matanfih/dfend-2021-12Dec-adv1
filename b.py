@@ -1,4 +1,7 @@
-import a
+print('[a] About to import b')
+import b
+print('[a] Done importing b')
+
 
 print('[a] Starting a, {__name__=}')
 
