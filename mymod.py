@@ -9,4 +9,9 @@ y = [10, 20, 30]
 def hello(name):
     return f'Hello, {name}!'
 
-print(f'Goodbye from {__name__}!')
+if __name__ == '__main__':
+    print(f'Goodbye from {__name__}!')
+
+    name = input('Enter your name: ')
+    print(hello(name))
+    
