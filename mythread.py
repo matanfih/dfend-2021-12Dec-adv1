@@ -3,13 +3,15 @@
 import threading
 import time
 import random
+import queue
 
-output = []
+
+q = queue.Queue()
 
 
 def hello(n):
     time.sleep(random.randint(0, 3))
-    output.append(f'{n} Hello!')
+    q.put(f'{n} Hello!')
 
 
 # start threads
