@@ -27,5 +27,10 @@ for one_filename in glob.glob('*.txt'):
 for one_thread in all_threads:
     one_thread.join()
 
+
+total = 0
 while not q.empty():
-    print(q.get())
+    filename, file_total = q.get()
+    print(f'Got {filename}, size {total}')
+    total += file_total
+print(f'{total=}')
