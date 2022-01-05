@@ -23,3 +23,11 @@ for one_filename in glob.glob('*.txt'):
     file_size(one_filename)
 
 end_time = time.perf_counter()
+
+total = 0
+while not q.empty():
+    filename, file_total = q.get()
+    print(f'Got {filename}, size {total}')
+    total += file_total
+print(f'{total=}')
+print(f'Total time: {end_time-start_time}')
