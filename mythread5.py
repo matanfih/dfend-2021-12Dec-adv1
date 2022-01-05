@@ -16,7 +16,7 @@ def file_size(filename):
 with ThreadPoolExecutor(max_workers=5) as executor:
     all_futures = []
     results = executor.map(file_size,
-                           glob.glob('*.txt'))
+                           glob.glob('*.txtt'))
 
     print(list(results))
 
