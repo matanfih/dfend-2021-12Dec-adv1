@@ -3,6 +3,7 @@
 import threading
 import queue
 import glob
+import time
 
 
 def file_size(filename):
