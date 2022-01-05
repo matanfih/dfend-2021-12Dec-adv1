@@ -12,10 +12,8 @@ def hello(n):
 
 
 with ThreadPoolExecutor(max_workers=5) as executor:
-for i in range(10):
-    t = threading.Thread(target=hello, args=(i,))
-    all_threads.append(t)
-    t.start()
+    for i in range(10):
+        executor.submit(hello, i)
 
 # wait for threads
 for one_thread in all_threads:
