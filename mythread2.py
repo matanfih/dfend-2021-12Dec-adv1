@@ -6,12 +6,10 @@ import random
 import queue
 
 
-q = queue.Queue()
-
-
 def hello(n):
     time.sleep(random.randint(0, 3))
-    q.put(f'{n} Hello!')
+    print(f'{n} Hello')
+    print(f'{n} Goodbye')
 
 
 # start threads
@@ -27,6 +25,3 @@ for one_thread in all_threads:
 
 
 print('Done!')
-
-while not q.empty():
-    print(q.get())
