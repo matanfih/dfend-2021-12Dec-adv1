@@ -21,4 +21,7 @@ with ThreadPoolExecutor(max_workers=5) as executor:
 
     done, not_done = wait(all_futures)
 
+    for one_future in done:
+        print(one_future.result())
+
 print('Done!')
