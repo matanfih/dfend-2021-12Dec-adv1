@@ -24,8 +24,12 @@ for one_filename in glob.glob('*.txt'):
 
 
 # collect threads
-for one_thread in threading.enumerate():
-    one_thread.join()
+while threading.active_count() > 1:
+    for one_thread in threading.enumerate():
+        if one_thread == threading.current_thread():
+            continue
+
+        one_thread.join(0.01)
 
 
 end_time = time.perf_counter()
