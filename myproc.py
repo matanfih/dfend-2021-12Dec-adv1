@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 
-from concurrent.futures import ThreadPoolExecutor, wait, as_completed
+from concurrent.futures import ProcessPoolExecutor, wait, as_completed
 import glob
 
 
@@ -16,7 +16,7 @@ def file_size(filename):
     return total
 
 
-with ThreadPoolExecutor(max_workers=5) as executor:
+with ProcessPoolExecutor(max_workers=5) as executor:
     results = executor.map(file_size,
                            glob.glob('*.txt'))
 
