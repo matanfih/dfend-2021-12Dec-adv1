@@ -27,6 +27,6 @@ with ThreadPoolExecutor(max_workers=5) as executor:
         if e:
             print(f'You got an exception: {e}')
         else:
-            print(one_future.result())
+            print(one_future.result())  # gives the result or exception
 
 print('Done!')
