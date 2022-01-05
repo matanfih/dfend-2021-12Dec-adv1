@@ -10,6 +10,9 @@ def file_size(filename):
     for one_line in open(filename):
         total += len(one_line)
 
+    if total % 2:
+        raise ValueError('Odd number of characters')
+
     return total
 
 
