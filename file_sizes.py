@@ -26,3 +26,6 @@ for one_filename in glob.glob('*.txt'):
 # collect threads
 for one_thread in all_threads:
     one_thread.join()
+
+while not q.empty():
+    print(q.get())
