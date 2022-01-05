@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 
-from concurrent.futures import ThreadPoolExecutor, wait
+from concurrent.futures import ThreadPoolExecutor, wait, as_completed
 import time
 import random
 
@@ -22,6 +22,8 @@ with ThreadPoolExecutor(max_workers=5) as executor:
     for i in range(10):
         one_future = executor.submit(hello, i)
         all_futures.append(one_future)
+
+    for one_future in
 
     done, not_done = wait(all_futures)
 
