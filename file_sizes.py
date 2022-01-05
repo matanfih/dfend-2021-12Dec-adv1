@@ -36,3 +36,4 @@ while not q.empty():
     print(f'Got {filename}, size {total}')
     total += file_total
 print(f'{total=}')
+print(f'Total time: {end_time-start_time}')
