@@ -1,8 +1,7 @@
 #!/usr/bin/env python3
 
 from concurrent.futures import ThreadPoolExecutor, wait, as_completed
-import time
-import random
+import glob
 
 
 def file_size(filename):
