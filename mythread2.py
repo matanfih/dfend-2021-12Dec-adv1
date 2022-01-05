@@ -5,11 +5,14 @@ import time
 import random
 import queue
 
+l = threading.Lock()
+
 
 def hello(n):
     time.sleep(random.randint(0, 3))
-    print(f'{n} Hello')
-    print(f'{n} Goodbye')
+    with l:
+        print(f'{n} Hello')
+        print(f'{n} Goodbye')
 
 
 # start threads
