@@ -13,7 +13,11 @@ def hello(n):
 
 
 with ThreadPoolExecutor(max_workers=5) as executor:
+    all_futures = []
+
     for i in range(10):
-        executor.submit(hello, i)
+        one_future = executor.submit(hello, i)
+        all_futures.append(one_future)
+
 
 print('Done!')
