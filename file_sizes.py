@@ -2,6 +2,7 @@
 
 import threading
 import queue
+import glob
 
 
 def file_size(filename):
@@ -10,8 +11,18 @@ def file_size(filename):
     for one_line in open(filename):
         total += len(one_line)
 
-    return total
+    q.put(total)
 
 
 q = queue.Queue()
 all_threads = []
+
+for one_filename in glob.glob('*.txt'):
+    t = threading.Thread(target=file_size, args=(one_filename,))
+    all_threads.append(t)
+    t.start()
+
+
+# collect threads
+for one_thread in all_threads:
+    one_thread.join()
