@@ -3,7 +3,6 @@
 from concurrent.futures import ThreadPoolExecutor
 import time
 import random
-import queue
 
 
 def hello(n):
