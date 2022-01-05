@@ -16,12 +16,10 @@ def file_size(filename):
 with ThreadPoolExecutor(max_workers=5) as executor:
     all_futures = []
 
-    for one_filename in glob.glob('*.txt'):
-        one_future = executor.submit(hello, i)
-        all_futures.append(one_future)
+    results = executor.map(file_size, glob.glob('*.txt')
 
     for one_future in as_completed(all_futures):
-        e = one_future.exception()
+        e=one_future.exception()
 
         if e:
             print(f'You got an exception: {e}')
