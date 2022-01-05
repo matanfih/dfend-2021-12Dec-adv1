@@ -17,6 +17,7 @@ def file_size(filename):
 q = queue.Queue()
 all_threads = []
 
+start_time = time.perf_counter()
 for one_filename in glob.glob('*.txt'):
     t = threading.Thread(target=file_size, args=(one_filename,))
     all_threads.append(t)
