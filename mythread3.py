@@ -9,6 +9,10 @@ def hello(n):
     time.sleep(random.randint(0, 3))
     print(f'{n} Hello')
     print(f'{n} Goodbye')
+
+    if n == 5:
+        raise ValueError('I do not like 5!')
+
     return f'{n} Done'
 
 
