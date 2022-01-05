@@ -27,3 +27,6 @@ for one_thread in all_threads:
 
 
 print('Done!')
+
+while not q.empty():
+    print(q.get())
