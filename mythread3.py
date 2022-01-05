@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 
-import threading
+from concurrent.futures import ThreadPoolExecutor
 import time
 import random
 import queue
