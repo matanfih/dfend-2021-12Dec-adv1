@@ -17,7 +17,7 @@ def file_size(filename):
 with ThreadPoolExecutor(max_workers=5) as executor:
     all_futures = []
 
-    for i in range(10):
+    for one_filename in glob.glob('*.txt'):
         one_future = executor.submit(hello, i)
         all_futures.append(one_future)
 
