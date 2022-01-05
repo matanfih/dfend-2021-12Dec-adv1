@@ -23,11 +23,7 @@ with ThreadPoolExecutor(max_workers=5) as executor:
         one_future = executor.submit(hello, i)
         all_futures.append(one_future)
 
-    for one_future in
-
-    done, not_done = wait(all_futures)
-
-    for one_future in done:
+    for one_future in as_completed(all_futures):
         e = one_future.exception()
 
         if e:
