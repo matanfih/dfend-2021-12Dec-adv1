@@ -10,17 +10,15 @@ def file_size(filename):
     for one_line in open(filename):
         total += len(one_line)
 
-    if total % 2:
-        raise ValueError('Odd number of characters')
-
     return total
 
 
-with ProcessPoolExecutor(max_workers=5) as executor:
-    results = executor.map(file_size,
-                           glob.glob('*.txt'))
+if __name__ == '__main__':
+    with ProcessPoolExecutor(max_workers=5) as executor:
+        results = executor.map(file_size,
+                               glob.glob('*.txt'))
 
-    for one_result in results:
-        print(one_result)
+        for one_result in results:
+            print(one_result)
 
-print('Done!')
+    print('Done!')
