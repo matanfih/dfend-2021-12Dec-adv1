@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 
 import threading
+import queue
 
 
 def file_size(filename):
@@ -12,4 +13,5 @@ def file_size(filename):
     return total
 
 
+q = queue.Queue()
 all_threads = []
