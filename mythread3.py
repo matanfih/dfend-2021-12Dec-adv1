@@ -11,8 +11,7 @@ def hello(n):
     print(f'{n} Goodbye')
 
 
-# start threads
-all_threads = []
+with ThreadPoolExecutor(max_workers=5) as executor:
 for i in range(10):
     t = threading.Thread(target=hello, args=(i,))
     all_threads.append(t)
