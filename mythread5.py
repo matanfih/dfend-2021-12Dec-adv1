@@ -5,15 +5,13 @@ import time
 import random
 
 
-def hello(n):
-    time.sleep(random.randint(0, 3))
-    print(f'{n} Hello')
-    print(f'{n} Goodbye')
+def file_size(filename):
+    total = 0
 
-    if n == 5:
-        raise ValueError('I do not like 5!')
+    for one_line in open(filename):
+        total += len(one_line)
 
-    return f'{n} **** Done'
+    return total
 
 
 with ThreadPoolExecutor(max_workers=5) as executor:
