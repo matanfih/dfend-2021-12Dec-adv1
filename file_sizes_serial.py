@@ -20,21 +20,6 @@ all_threads = []
 
 start_time = time.perf_counter()
 for one_filename in glob.glob('*.txt'):
-    t = threading.Thread(target=file_size, args=(one_filename,))
-    all_threads.append(t)
-    t.start()
-
-
-# collect threads
-for one_thread in all_threads:
-    one_thread.join()
-
+    file_size(one_filename)
 
 end_time = time.perf_counter()
-total = 0
-while not q.empty():
-    filename, file_total = q.get()
-    print(f'Got {filename}, size {total}')
-    total += file_total
-print(f'{total=}')
-print(f'Total time: {end_time-start_time}')
