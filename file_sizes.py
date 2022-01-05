@@ -29,6 +29,7 @@ for one_thread in all_threads:
     one_thread.join()
 
 
+end_time = time.perf_counter()
 total = 0
 while not q.empty():
     filename, file_total = q.get()
