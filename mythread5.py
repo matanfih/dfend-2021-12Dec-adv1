@@ -20,7 +20,6 @@ with ThreadPoolExecutor(max_workers=5) as executor:
     results = executor.map(file_size,
                            glob.glob('*.txt'))
 
-    print(results)
     for one_result in results:
         print(one_result)
 
