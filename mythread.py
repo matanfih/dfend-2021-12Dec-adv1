@@ -4,10 +4,12 @@ import threading
 import time
 import random
 
+output = []
+
 
 def hello(n):
     time.sleep(random.randint(0, 3))
-    print(f'{n} Hello!')
+    output.append(f'{n} Hello!')
 
 
 # start threads
