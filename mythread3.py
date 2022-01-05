@@ -14,10 +14,3 @@ def hello(n):
 with ThreadPoolExecutor(max_workers=5) as executor:
     for i in range(10):
         executor.submit(hello, i)
-
-# wait for threads
-for one_thread in all_threads:
-    one_thread.join()   # wait for this thread to end
-
-
-print('Done!')
