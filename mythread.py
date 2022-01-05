@@ -10,8 +10,11 @@ def hello(n):
     print(f'{n} Hello!')
 
 
+all_threads = []
 for i in range(10):
     t = threading.Thread(target=hello, args=(i,))
+    all_threads.append(t)
     t.start()
+
 
 print('Done!')
