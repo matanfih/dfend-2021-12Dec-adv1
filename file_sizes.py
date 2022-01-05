@@ -11,7 +11,7 @@ def file_size(filename):
     for one_line in open(filename):
         total += len(one_line)
 
-    q.put(total)
+    q.put((filename, total))
 
 
 q = queue.Queue()
